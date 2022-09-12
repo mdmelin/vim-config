@@ -14,8 +14,8 @@ cp ~/deleteme/vim-config/.vimrc ~
 
 vim +PluginInstall +qall
 
-#YouCompleteMe install requires cmake, installed via pip
-#pip install cmake
+#YouCompleteMe install requires cmake and other dependencies
+apt install build-essential cmake vim-nox python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 
