@@ -4,26 +4,26 @@
 
 # install vundle, the package manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-mkdir ~/deleteme
-cd ~/deleteme
+mkdir /tmp/deleteme
+cd /tmp/deleteme
 
 # clone and move my vim config file to the proper spot
 git clone https://github.com/mdmelin/vim-config.git
-cp ~/deleteme/vim-config/.vimrc ~
+cp /tmp/deleteme/vim-config/.vimrc ~
 
 
 vim +PluginInstall +qall
 
 #YouCompleteMe install requires cmake and other dependencies
-apt install build-essential cmake vim-nox python3-dev
+#apt install build-essential cmake vim-nox python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 
 # Install color scheme
-cd ~/deleteme
+cd /tmp/deleteme
 git clone https://github.com/mhartington/oceanic-next.git
 cd oceanic-next
 cp colors/OceanicNext.vim ~/.vim/colors
 
 vim +PluginInstall +qall
-rm -r ~/deleteme
+rm -r /tmp/deleteme
